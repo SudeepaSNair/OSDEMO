@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
     printf("Before thread concatenation \n");
     baudrate1=9600;
     pthread_create(&uart1_tid,NULL,uart_init,&baudrate1);
-    baudrate1=115200;
+    baudrate2=115200;
     pthread_create(&uart2_tid,NULL,uart_init,&baudrate2);
     printf("After thread concatenation\n");
     pthread_join(uart1_tid,NULL);
